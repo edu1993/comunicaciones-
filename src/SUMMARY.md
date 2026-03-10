@@ -1,9 +1,16 @@
-# Resumen
+# Summary
 
-- [Introducción](./intro.md)
-- [Señales y Sistemas](./senales.md)
-    - [Series de Fourier](./fourier.md)
-    - [Transformada de Laplace](./laplace.md)
-- [Modulaciones](./modulaciones.md)
-    - [AM y FM](./analogicas.md)
-    - [Modulaciones Digitales](./digitales.md)
+
+---
+
+# Primer Cuatrimestre
+
+- [Clase 09/03: Introducción y Modelos](./clase-09-03.md)
+    - [Anexo: Recursos Multimedia](./anexo-clase-09-03.md)
+
+---
+
+# Apéndices
+
+- [Glosario de Términos](./glosario.md)
+- [Bibliografía](./bibliografia.md)

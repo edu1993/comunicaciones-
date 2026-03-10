@@ -1,7 +1,14 @@
 [book]
-title = "Comunicaciones"
-authors = []
+title = "Comunicaciones - UTN"
+authors = ["Juan Eduardo Alvarez"]
 language = "es"
+src = "src"
 
 [output.html]
+# Esto es vital para que se vean las fórmulas que antes se veían raras
 mathjax-support = true
+# Opcional: añade un botón para ir al repo de GitHub
+# git-repository-url = "https://github.com/tu-usuario/tu-repo"
+
+[output.html.search]
+limit-results = 20
