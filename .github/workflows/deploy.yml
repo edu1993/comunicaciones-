@@ -2,21 +2,29 @@ name: Deploy mdBook
 on:
   push:
     branches:
-      - master  # Cambia a 'master' si usas ese nombre
+      - main  # <--- Cambia a 'master' solo si tu rama se llama así
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v3
+
       - name: Install mdBook
         run: |
           curl -sSL https://github.com/rust-lang/mdBook/releases/download/v0.4.40/mdbook-v0.4.40-x86_64-unknown-linux-gnu.tar.gz | tar -xz
           chmod +x mdbook
+
       - name: Build Book
         run: ./mdbook build
+
+      - name: Add .nojekyll
+        run: touch book/html/.nojekyll
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./book
+          publish_dir: ./book/html  # <--- IMPORTANTE: Incluir /html
