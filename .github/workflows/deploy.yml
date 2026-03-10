@@ -2,7 +2,7 @@ name: Deploy mdBook
 on:
   push:
     branches:
-      - main  # <--- Cambia a 'master' solo si tu rama se llama así
+      - main  # Asegurate de que tu rama se llame main, si es master cambialo
 
 jobs:
   deploy:
@@ -20,11 +20,8 @@ jobs:
       - name: Build Book
         run: ./mdbook build
 
-      - name: Add .nojekyll
-        run: touch book/html/.nojekyll
-
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./book/html  # <--- IMPORTANTE: Incluir /html
+          publish_dir: ./book  # mdBook por defecto usa la carpeta 'book'
