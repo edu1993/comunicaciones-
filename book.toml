@@ -1,0 +1,7 @@
+[book]
+title = "Comunicaciones"
+authors = []
+language = "es"
+
+[output.html]
+mathjax-support = true
