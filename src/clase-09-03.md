@@ -44,7 +44,7 @@ Denotada como $u(t)$. Representa un cambio de estado que se mantiene en $1$ para
 ---
 
 ### Análisis de Funciones
-$$\sum_{n=1}^{\infty} n = 36$$
+$$\sum_{n=1}^{8} n = 36$$
 *(Gráfico de una función constante $x(t) = 36$ sobre el eje $T$)*
 
 ---
